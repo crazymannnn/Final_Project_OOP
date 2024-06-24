@@ -9,24 +9,25 @@ package com.mycompany.main;
  * @author ADMIN
  */
 public class Enroll {
+    
     ManageCourse mCourse = new ManageCourse();
     ManageStudent mStudent = new ManageStudent();
     
     public Enroll() {
     }
-
+    
     public ManageCourse getmCourse() {
         return mCourse;
     }
-
+    
     public void setmCourse(ManageCourse mCourse) {
         this.mCourse = mCourse;
     }
-
+    
     public ManageStudent getmStudent() {
         return mStudent;
     }
-
+    
     public void setmStudent(ManageStudent mStudent) {
         this.mStudent = mStudent;
     }
@@ -45,10 +46,10 @@ public class Enroll {
                 }
             }*/
             if (checkTime(student, course)) {
-                    student.addCourse(course);
-                    course.addStudent(student);
-                    return true;
-                }
+                student.addCourse(course);
+                course.addStudent(student);
+                return true;
+            }
         } else {
             student.addCourse(course);
             course.addStudent(student);
@@ -69,7 +70,7 @@ public class Enroll {
     public boolean checkTime(Student student, Course course) {
         if (!checkDay(student, course)) {
             for (int i = 0; i < student.getCourseOfStu().size(); i++) {
-                if (student.getCourseOfStu().get(i).getTime().equals(course.getTime())) {
+                if (student.getCourseOfStu().get(i).getTime().equals(course.getTime()) && student.getCourseOfStu().get(i).getDay().equals(course.getDay())) {
                     return false;
                 }
             }

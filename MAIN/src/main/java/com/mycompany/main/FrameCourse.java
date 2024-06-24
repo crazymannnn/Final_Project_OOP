@@ -476,6 +476,7 @@ public class FrameCourse extends javax.swing.JFrame {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         mCourse.WriteFileCourses();
+        JOptionPane.showMessageDialog(null, "Saved Successfully", "Notification", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnSaveActionPerformed
 
     private void idtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idtActionPerformed
